@@ -8,3 +8,103 @@
     --color-erro: hsl(0, 100%, 66%);
     --font-text: font-family: 'Space Grotesk', sans-serif;
 }
+
+@media (min-width: 375px){
+    main{
+        width: 100vw;
+        height: 100vh;
+        background: url(/images/bg-main-mobile.png) no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .container{
+        height: 30%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+    }
+
+    .card-front{
+        background-image: url(/images/bg-card-front.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 22%;
+        border-radius: 8px;
+        z-index: 5;
+        position: absolute;
+        top: 13%;
+        left: 5%;
+        transform: translate(-5px, 20px);
+        color: var(--color--white);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
+
+    #img-card{
+        width: 75px;
+        padding: 15px 0px 15px 15px;
+    }
+
+    #section-information{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 300px;
+        padding: 15px 15px 15px 15px;
+        letter-spacing: 2px;
+    }
+
+    #section-information > h5{
+        font-size: 1.3em;
+        font-weight: 500;
+        
+    }
+
+    #section-information > p{
+        margin-top: 15px;
+        font-size: .7em;
+        text-transform: uppercase
+    }
+        
+    .card-back{
+        background-image: url(/images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 166px;
+        width: 300px;
+        border-radius: 8px;
+        z-index: 1;
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        transform: translate(0px, 0px);
+        color: var(--color--white);
+    }
+
+    #information-cvc{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 35px;
+    position: absolute;
+    right: 0%;
+    top: -1%;
+    font-size: .8em;
+    }
+    
+    .container-form{
+        height: 70%;
+        background: var(--color--white);
+    }
+}
