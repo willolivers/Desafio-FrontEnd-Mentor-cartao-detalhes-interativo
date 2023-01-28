@@ -9,7 +9,7 @@
     --font-text: font-family: 'Space Grotesk', sans-serif;
 }
 
-@media (min-width: 375px){
+@media (min-width: 375px) and (max-width: 1100px){
     main{
         width: 100vw;
         height: 100vh;
@@ -106,5 +106,131 @@
     .container-form{
         height: 70%;
         background: var(--color--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #form{
+        width: 85%;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        text-transform: uppercase;
+    }
+
+    #form > label{
+        color: var(--color--very-dark-violet);
+        font-weight: 700;
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+
+    #form > input{
+        padding: 10px;
+        border: 1px solid var(--color--light-graylist-violet);
+    }
+
+    #box-date-cvc{
+        width: 100%;
+        display: flex;
+    }
+
+    .box1{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .box1> label{
+        color: var(--color--very-dark-violet);
+        width: 100%;
+        font-weight: 700;
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+
+    .date{
+        margin-top: 10px;
+        width: 40%;
+        display: flex;
+        padding: 10px;
+        border: 1px solid var(--color--light-graylist-violet);
+        border-radius: 5px;
+    }
+
+    #cvc{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        border: 1px solid var(--color--light-graylist-violet);
+        border-radius: 5px;
+    }
+
+    #btn-confirm{
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--color--very-dark-violet);
+        color: var(--color--white);
+        font-size: 1em;
+        margin-top: 25px;
+    }
+
+
+
+
+
+    .container-finalization{
+        height: 70%;
+        background: var(--color--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box-final{
+        width: 350px;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        text-transform: uppercase;
+    }
+
+    #img-complete{
+        width: 80px;
+    }
+
+    #btn-continue{
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--color--very-dark-violet);
+        color: var(--color--white);
+        font-size: 1em;
+        margin-top: 25px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+
+    .erro{
+        font-size: .8em;
+        font-size: 500;
+        text-transform: capitalize;
+        color: var(--color-erro);
+        display: none;
     }
 }

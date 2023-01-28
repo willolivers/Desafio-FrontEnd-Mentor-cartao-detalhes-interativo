@@ -17,7 +17,7 @@
     font-family:var(--font-family);
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1101px){
     main{
         width: 100vw;
         height: 100vh;
@@ -37,23 +37,247 @@
         gap: 30px;
     }
 
-    .card-front{
-        background-image: url(/images/bg-card-front.png);
-        width: 447px;
-        height: 245px;
-        
-    }
-
     .card-back{
         background-image: url(/images/bg-card-back.png);
         width: 447px;
         height: 245px;
         
     }
+
+    /*************************CARDS*********************/
+
+    .card-front{
+        background-image: url(/images/bg-card-front.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 410px;
+        height: 225px;
+        border-radius: 8px;
+        z-index: 5;
+        position: absolute;
+        top: 18%;
+        left: 11%;
+        transform: translate(7px, 20px);
+        color: var(--color--white);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-sizing: border-box;
+    }
     
+
+    #img-card{
+        width: 75px;
+        padding: 15px 0px 15px 15px;
+    }
+
+    #section-information{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        padding: 15px 15px 15px 15px;
+        letter-spacing: 2px;
+    }
+
+    #section-information > h5{
+        font-size: 1.6em;
+        font-weight: 500;
+        
+    }
+
+    #section-information > p{
+        margin-top: 15px;
+        font-size: 1em;
+        text-transform: uppercase
+    }
+
+
+
+
+
+
+
+    .card-back{
+        background-image: url(/images/bg-card-back.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 225px;
+        width: 410px;
+        border-radius: 8px;
+        z-index: 1;
+        position: absolute;
+        bottom: 20%;
+        left: 16%;
+        transform: translate(0px, 0px);
+        color: var(--color--white);
+    }
+
+    #information-cvc{
+        width: 90%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 35px;
+        position: absolute;
+        right: 3%;
+        top: -1%;
+        font-size: .8em;
+    }
+
+
+
+
+    /*******************FORMULARIO***********************************/
+
+
     .container-form{
         width: 70%;
         background: var(--color--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
+    #form{
+        max-width: 380px;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+        text-transform: uppercase;
+    }
+
+    #form > label{
+        color: var(--color--very-dark-violet);
+        font-weight: 700;
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+
+    #form > input{
+        padding: 10px;
+        border: 1px solid var(--color--light-graylist-violet);
+        font-size: 1.2em;
+        font-weight: 600;
+    }
+
+    #box-date-cvc{
+        width: 100%;
+        display: flex;
+    }
+
+    .box1{
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .box1> label{
+        color: var(--color--very-dark-violet);
+        width: 100%;
+        font-weight: 700;
+        font-size: .8em;
+        letter-spacing: 1px;
+        margin-top: 15px;
+    }
+
+    .date{
+        margin-top: 10px;
+        width: 40%;
+        display: flex;
+        padding: 10px;
+        border: 1px solid var(--color--light-graylist-violet);
+        border-radius: 5px;
+    }
+
+    #cvc{
+        margin-top: 10px;
+        width: 100%;
+        display: flex;
+        padding: 10px;
+        border: 1px solid var(--color--light-graylist-violet);
+        border-radius: 5px;
+    }
+
+    #btn-confirm{
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--color--very-dark-violet);
+        color: var(--color--white);
+        font-size: 1em;
+        margin-top: 25px;
+    }
+
+
+
+
+
+    /****************************PAGE FINALIZATION********************/
+
+    .container-finalization{
+        width: 70%;
+        background: var(--color--white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .box-final{
+        width: 350px;
+        height: 75%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        text-transform: uppercase;
+    }
+
+    #img-complete{
+        width: 80px;
+    }
+
+    #txth2{
+        color: var(--color--very-dark-violet);
+        font-size: 1.6em;
+        letter-spacing: 2px;
+    }
+
+    #txt-agradecimento{
+        color: var(--color--dark-grayish-violet);
+        text-transform: capitalize;
+    }
+
+    #btn-continue{
+        width: 100%;
+        padding: 15px;
+        border-radius: 10px;
+        border: none;
+        background-color: var(--color--very-dark-violet);
+        color: var(--color--white);
+        font-size: 1em;
+        margin-top: 25px;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .erro{
+        font-size: .8em;
+        font-size: 500;
+        text-transform: capitalize;
+        color: var(--color-erro);
+        display: none;
+    }
 }
+
+
+
