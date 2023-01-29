@@ -42,16 +42,18 @@
         <label for="cardNumber">Card Number</label>
         <input type="text" name="cardNumber" id="number" placeholder="e.g. 1234 5678 9123 0000" maxlength="16">
 
+        <p class="erro"></p>
+
         <div id="box-date-cvc">
           <div class="box1">
             <label for="expDate">Exp. Date (MM/YY)</label>
-            <input type="text" name="expDate" class="date" id="mounth" placeholder="MMM">
-            <input type="text" name="expdate" class="date" id="year" placeholder="YYYY">
+            <input type="text" name="expDate" class="date" id="mounth" placeholder="MMM" maxlength="2">
+            <input type="text" name="expdate" class="date" id="year" placeholder="YYYY" maxlength="2">
           </div>
           
           <div class="box1">
             <label for="cvc">CVC</label>
-            <input type="text" name="cvc" id="cvc" placeholder="e.g. 123">
+            <input type="text" name="cvc" id="cvc" placeholder="e.g. 123" maxlength="3">
           </div>
         </div>
 
