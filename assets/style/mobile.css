@@ -228,7 +228,8 @@
     }
 
 
-    .erro{
+    .erro-Name, .erro-Number,
+    .erro-Date, .erro-Cvc{
         font-size: .8em;
         font-size: 500;
         text-transform: capitalize;
