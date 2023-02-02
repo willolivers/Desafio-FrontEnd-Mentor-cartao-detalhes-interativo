@@ -7,6 +7,9 @@ const cardTxtName = document.querySelector('#card-name')
 const cardTxtDate = document.querySelector('#card-date')
 const cardTxtCvc = document.querySelector('#information-cvc')
 
+const cardExpMounth = document.querySelector('#mounth')
+const cardExpYear = document.querySelector('#year')
+
 const cardName = document.querySelector('#name')
 const cardNumber = document.querySelector('#number')
 const cardDate = document.querySelectorAll('.date')
@@ -25,6 +28,8 @@ form.addEventListener('submit', (event) => {
     let dados = {
         name: cardName.value,
         number: cardNumber.value,
+        mounth: cardExpMounth.value,
+        year: cardExpYear.value,
         cvc: cardCvc.value
     }
 
@@ -48,6 +53,30 @@ cardNumber.addEventListener('input', (event) => {
         erroNumber.innerHTML = ''
     }
 })
+
+//cardDate.forEach(el => el.addEventListener('input', (event) => {
+  //  cardTxtDate.innerHTML = "" + cardDate[0].value + "/" + cardDate[1].value 
+//}))
+
+const updateDate = () => cardTxtDate.innerHTML = 
+    "00".slice(0,2 - cardDate[0].value.length) + cardDate[0].value + "/"
+    + "00".slice(0,2 - cardDate[1].value.length) + cardDate[1].value
+
+cardDate.forEach(el => el.addEventListener('input', updateDate,))
+
+function validaExp() {
+
+    if (cardExpMounth.value != Number(cardExpMounth.value)) {
+        erroDate.innerHTML = 'Wrong format, numbers only'
+    } else{
+        erroDate.innerHTML = ''
+    }
+
+    if (!cardExpMounth.value) {
+        erroDate.innerHTML = "Can't be blank"
+    }
+}
+
 
 
 cardCvc.addEventListener('input', (event) => {
