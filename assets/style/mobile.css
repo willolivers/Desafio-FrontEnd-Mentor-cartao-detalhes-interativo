@@ -13,7 +13,7 @@
     main{
         width: 100vw;
         height: 100vh;
-        background: url(/assets/images/bg-main-mobile.png) no-repeat;
+        background: url(/assets/image/bg-main-mobile.png) no-repeat;
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -31,7 +31,7 @@
     }
 
     .card-front{
-        background-image: url(/assets/images/bg-card-front.png);
+        background-image: url(/assets/image/bg-card-front.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -78,7 +78,7 @@
     }
         
     .card-back{
-        background-image: url(/assets/images/bg-card-back.png);
+        background-image: url(/assets/image/bg-card-back.png);
         background-repeat: no-repeat;
         background-size: cover;
         height: 166px;
