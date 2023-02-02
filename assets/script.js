@@ -34,7 +34,7 @@ form.addEventListener('submit', (event) => {
     }
 
     validarInput()
-    console.log(dados)
+    console.log(dados,)
 })
 
 
@@ -62,10 +62,9 @@ const updateDate = () => cardTxtDate.innerHTML =
     "00".slice(0,2 - cardDate[0].value.length) + cardDate[0].value + "/"
     + "00".slice(0,2 - cardDate[1].value.length) + cardDate[1].value
 
-cardDate.forEach(el => el.addEventListener('input', updateDate,))
+cardDate.forEach(el => el.addEventListener('input', updateDate))
 
 function validaExp() {
-
     if (cardExpMounth.value != Number(cardExpMounth.value)) {
         erroDate.innerHTML = 'Wrong format, numbers only'
     } else{
@@ -75,7 +74,10 @@ function validaExp() {
     if (!cardExpMounth.value) {
         erroDate.innerHTML = "Can't be blank"
     }
+
 }
+
+cardExpMounth.addEventListener('input', validaExp)
 
 
 
