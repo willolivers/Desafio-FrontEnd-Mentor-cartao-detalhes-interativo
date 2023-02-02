@@ -1,6 +1,6 @@
 const form = document.querySelector('#form');
 
-const btnConfirm = document.querySelector('#btn-confirm');
+const btnConfirm = document.querySelector('#btn-confirm')
 
 const cardTxtNumbers = document.querySelector('#card-txt-numbers')
 const cardTxtName = document.querySelector('#card-name')
@@ -20,21 +20,13 @@ const cardCvc = document.querySelector('#cvc')
 const erroName = document.querySelector('.erro-Name')
 const erroNumber = document.querySelector('.erro-Number')
 const erroDate = document.querySelector('.erro-Date')
+const erroDateYear = document.querySelector('.erro-Date-Year')
 const erroCvc = document.querySelector('.erro-Cvc')
 
 
 form.addEventListener('submit', (event) => {
     event.preventDefault()
-    let dados = {
-        name: cardName.value,
-        number: cardNumber.value,
-        mounth: cardExpMounth.value,
-        year: cardExpYear.value,
-        cvc: cardCvc.value
-    }
-
     validarInput()
-    console.log(dados,)
 })
 
 
@@ -54,17 +46,13 @@ cardNumber.addEventListener('input', (event) => {
     }
 })
 
-//cardDate.forEach(el => el.addEventListener('input', (event) => {
-  //  cardTxtDate.innerHTML = "" + cardDate[0].value + "/" + cardDate[1].value 
-//}))
-
 const updateDate = () => cardTxtDate.innerHTML = 
     "00".slice(0,2 - cardDate[0].value.length) + cardDate[0].value + "/"
     + "00".slice(0,2 - cardDate[1].value.length) + cardDate[1].value
 
 cardDate.forEach(el => el.addEventListener('input', updateDate))
 
-function validaExp() {
+function validaExpMounth() {
     if (cardExpMounth.value != Number(cardExpMounth.value)) {
         erroDate.innerHTML = 'Wrong format, numbers only'
     } else{
@@ -74,10 +62,23 @@ function validaExp() {
     if (!cardExpMounth.value) {
         erroDate.innerHTML = "Can't be blank"
     }
-
+    
 }
 
-cardExpMounth.addEventListener('input', validaExp)
+function validaExpYear() {
+    if (cardExpYear.value != Number(cardExpYear.value)) {
+        erroDate.innerHTML = 'Wrong format, numbers only'
+    } else {
+        erroDate.innerHTML = ''
+    }
+    
+    if (!cardExpYear.value) {
+        erroDate.innerHTML = "Can't be blank"
+    }
+}
+
+cardExpMounth.addEventListener('input', validaExpMounth, )
+cardExpYear.addEventListener('input', validaExpYear )
 
 
 
@@ -101,7 +102,8 @@ function validarInput() {
     }
 }
 
-
-
+btnConfirm.addEventListener('click', () => {
+    window.location.href = 'page-finalization.html'
+})
 
 
