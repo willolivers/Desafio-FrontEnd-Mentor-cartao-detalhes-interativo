@@ -21,7 +21,7 @@
     main{
         width: 100vw;
         height: 100vh;
-        background: url(/images/bg-main-desktop.png) no-repeat;
+        background: url(/assets/images/bg-main-desktop.png) no-repeat;
         background-position: center;
         background-size: cover;
         background-attachment: fixed;
@@ -38,7 +38,7 @@
     }
 
     .card-back{
-        background-image: url(/images/bg-card-back.png);
+        background-image: url(/assets/images/bg-card-back.png);
         width: 447px;
         height: 245px;
         
@@ -47,7 +47,7 @@
     /*************************CARDS*********************/
 
     .card-front{
-        background-image: url(/images/bg-card-front.png);
+        background-image: url(/assets/images/bg-card-front.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -100,7 +100,7 @@
 
 
     .card-back{
-        background-image: url(/images/bg-card-back.png);
+        background-image: url(/assets/images/bg-card-back.png);
         background-repeat: no-repeat;
         background-size: cover;
         height: 225px;
